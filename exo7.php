@@ -30,3 +30,5 @@ echo "L'enfant qui a 10 ans appartient à la catégorie: $categorie";
 } else {
         echo "Veuillez saisir un âge numérique !";
     }
+
+// VERSION FACTORISER 
