@@ -8,17 +8,30 @@
 1 x 8 = 8<br>
 2 x 8 = 16<br>
 3 x 8 = 24<br>
-...</h2 
+...</h2>
 
 <?php
- // TECHNIQUE FOR 
+ 
+ echo "<h3>TECHNIQUE FOR</h3>";
 
  $nb = 8; 
 
  for($i = 1; $i <= 10; $i++) {
-     echo "Table de multiplication de $i : <br>"; 
-     echo "$i x $nb = " . ($i * $nb) . "<br>";  
+     echo "Table de multiplication de $nb : <br>"; 
+     echo "$nb x $i = " . ($nb * $i) . "<br>";  
      echo "<br>"; 
  }
 
- // TECHNIQUE FOREACH
+ echo "<br>";
+
+ echo "<h3>TECHNIQUE FOREACH</h3>";
+ 
+ $nb = 8;
+ $numbers = range(1, 10);
+ 
+ foreach ($numbers as $i) {
+     echo "Table de multiplication de $nb : <br>";
+     echo "$nb x $i = " . ($nb * $i) . "<br>";
+     echo "<br>";
+ }
+ 
