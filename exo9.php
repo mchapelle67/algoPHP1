@@ -27,7 +27,7 @@ if ($hommeImposable || $femmeImposable) {
     echo "La personne n'est pas imposable.<br>";
 }
 
-// VERSION SWITCH CASE 
+// VERSION SWITCH CASE
 
 $age = 32;
 $sexe = "F";
@@ -44,4 +44,4 @@ if(gettype($age) == "integer") {
     }
 } else {
     echo "Veuillez saisir un âge numérique !<br>";
-}
+} 

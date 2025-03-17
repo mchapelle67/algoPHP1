@@ -18,21 +18,30 @@ et de 1 euros.
 
 $montantTotal = 152;
 $montantVerse = 200;
-$especes = [
-    "billetDix" => 4,
-    "billetCinq" => 1,
-    "pieceDeux" => 1,
-    "pieceUn" => 1,
-];
+$nbDix = 0;
+$nbCinq = 0;
+$nbDeux = 0;
+$montantRendre = $montantVerse - $montantTotal;
+
+while($montantRendre >= 10) {
+    $nbDix++; 
+    $montantRendre -= 10;
+} if ($montantRendre < 10) {
+    $nbCinq++;
+    $montantRendre -= 5;
+} while($montantRendre >= 2) {
+    $nbDeux++;
+    $montantRendre -= 2;
+}
 
 
 echo "Montant à payer: $montantTotal euros<br> 
     Montant versé: $montantVerse euros<br>
-    Reste à payer: ".($montantVerse - $montantTotal)." euros<br>
+    Reste à payer: ".$montantVerse - $montantTotal." euros<br>
     **************************** <br>
-    Rendue de monnaie:<br>"
-    .$especes["billetDix"]." billets de 10 euros - "
-    .$especes["billetCinq"]." billet de 5 euros - "
-    .$especes["pieceDeux"]." pièce de deux euros - "
-    .$especes["pieceUn"]." pièce de 1 euros.";
+    Rendue de monnaie:<br>
+    $nbDix billets de 10 euros - 
+    $nbCinq billet de 5 euros - 
+    $nbDeux pièce de deux euros - 
+    $montantRendre pièce de 1 euros.";
 

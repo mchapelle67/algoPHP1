@@ -13,7 +13,7 @@
 
     <?php
 
-$age = 5;
+$age = 10;
 
 if(gettype($age) == "integer") { 
     if ($age >= 6 && $age <= 7) {
@@ -33,24 +33,20 @@ echo "L'enfant qui a 10 ans appartient à la catégorie: $categorie <br>";
 
     // VERSION FACTORISER
 
-    $age = 7;
+    $age = 5;
 
 if(gettype($age) == "integer") { 
     if ($age >= 12) {
     $categorie = "Cadet";
-        } elseif ($age <= 11) {
+        } elseif ($age >= 10) {
     $categorie = "Minime";
-        } elseif ($age <= 9) {
+        } elseif ($age >= 7) {
     $categorie = "Pupille";
-//         } elseif ($age <= 7) {
-//     $categorie = "Poussin"; 
-//  } else 
-//     echo "L'enfant n'a pas l'âge recquis.";  POURQUOI CA MARCHE PAS ? 
-
-    echo "L'enfant qui a 10 ans appartient à la catégorie: $categorie";
+    } else {
+        $categorie = "Poussin";
+    }
+    echo "L'enfant qui a $age appartient à la catégorie: $categorie";
 
 } else {
         echo "Veuillez saisir un âge numérique !";
     }
-
-    

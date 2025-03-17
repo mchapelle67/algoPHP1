@@ -1,4 +1,4 @@
-<h1>Exercice 1</h1>
+<h1>Exercice 11</h1>
 
 <p>
     Initialiser un tableau de x marques de voitures. Ecrire un algorithme permettant de parcourir ce tableau 
@@ -19,4 +19,3 @@ $marques = ["Peugeot", "Renault", "BMW", "Mercedes"];
             echo $marque."<br>";
         }
 
-        // A CORRIGER 11, 10, 9. AIDE EXERCICE 7
