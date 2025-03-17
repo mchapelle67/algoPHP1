@@ -16,27 +16,28 @@
 
 <?php
 
-// ksort($prenom);
-
 $personnes = [
-    "Mickaël" => "Chinois",
-    "Marie-Claire" => "Anglais",
-    "Virgile" => "Espagnol"
+    "Mickaël" => "Français",
+    "Virgile" => "Espagnol",
+    "Marie-Claire" => "Anglais"
 ];
 
 function bonjour($prenom, $langue) {
     switch($langue) {
-        case "Espagnol": echo "Hola $prenom <br>"; break;
-        case "Anglais": echo "Hello $prenom <br>"; break;
-        case "Français": echo "Salut $prenom <br>"; break;
+        case "Espagnol": echo "Hola $prenom"; break;
+        case "Anglais": echo "Hello $prenom"; break;
+        case "Français": echo "Salut $prenom"; break;
         default: echo "Cette langue n'est pas prise en compte."; 
     }
  }
 
+ ksort($personnes);
+
 foreach($personnes as $prenom => $langue) {
-    // var_dump($langue);die;
-     return bonjour($prenom, $langue);
+     echo bonjour($prenom, $langue)."<br>";
 }
 
-var_dump($personnes);
+
+
+
 
